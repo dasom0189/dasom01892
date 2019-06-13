@@ -2,79 +2,81 @@
 <html>
 <head>
 	<style type="text/css">
-		*{
-			padding: 0;
-			margin: 0;
-		}
-		
-	
-	#logo {
-		margin-top:20px;
-		float: left;
-	}
-	#top {
-		
-		width: 1000px;
-		height: 50px;
-		margin: 30px 20px 0 0;
-		margin-top: 10px;
-		background-color: #FCB1CF
-
-	}
-	nav{
-		width: 1000px;
-		height: 70px;
-		border: solid 1px #FFFFFF;
-		background-color: #FDFA9A;
-		
-		
-	}
-	nav ul {
-		float: right;
-		margin: 20px 66px;
-	}
-	li{
-		list-style-type: none;
-	}
-	section {
-		float: left;
-		margin-top: 10px;
-		
-	}
-	
-	#page{
-		width: 1000px;
-		margin: auto;
-	}
-
-	h1 {
+	* {padding: 0;
+      margin: 0;}
+   
+  .tab_content {position:absolute;top:59%;left:50%;transform:translate(-50%,-50%);font-size:12px;border:10px }  
+  .conbox {position:relative;}
+  .conbox span {display:inline-block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-weight:bolder;font-size:20px;}
+   
+  .clear {
+      clear: both;
+    }
+ 
+  input[type="radio"] {display:none;}
+  .conbox {width:940px;height:450px;background:#aaa;display:none;}
+  .btn {padding:10px;text-align:center;}
+  label[for*="tab"] {display:inline-block;padding:10px;background:#ccc;cursor:pointer;margin:5px;border-radius:100%;}
+ 
+  .con1 {background:url(img/777.PNG) center center no-repeat;}
+  .con2 {background:url(img/778.PNG) center center no-repeat;}
+  .con3 {background:url(img/779.PNG) center center no-repeat;}
+ 
+  input[id="tab01"]:checked ~ .con1 {display:block;}
+  input[id="tab02"]:checked ~ .con2 {display:block;}
+  input[id="tab03"]:checked ~ .con3 {display:block;}
+ 
+  input[id="tab01"]:checked ~ .btn > label[for="tab01"] {background:#666;} 
+  input[id="tab02"]:checked ~ .btn > label[for="tab02"] {background:#666;}
+  input[id="tab03"]:checked ~ .btn > label[for="tab03"] {background:#666;}
+   
+   
+  nav{
+    width: 1000px;
+    height: 70px;
+    border: solid 1px #FFFFFF;
+    background-color: #FDFA9A;
+     
+     
+  }
+  nav ul {
+    float: right;
+    margin: 20px 66px;
+  }
+  li{
+    list-style-type: none;
+  }
+ 
+   
+  #page{
+    width: 1000px;
+    margin: auto;
+  }
+ 
+  h1 {
      text-align:center;
  }
-
  
-
  .dropdown{
    display: block;
-  
+   
   }
-   .dropdownContents {
+   .dropdownContents{
    display: none;
    background-image: linear-gradient(#F8FAAC,#F8E0E6);
-   position: absolute;/*옆으로*/
+   position: absolute;
    width: 100px;
    padding: 12px 30px;
-
-}
+ 
+  }
   .dropdown:hover .dropdownContents{
    display: block;
   }
   .dropdown{
    display: inline-block;
   }
-  
-
- a{
-  	text-decoration: none;
+  a{
+    text-decoration: none;
   }
  
  .clear {
@@ -91,7 +93,7 @@
 footer{
 		width: 1000;
 		height: 100px;
-		margin-top: 10px;
+		margin-top: 550px;
 		background-color: #FAD8F8;
 	}
 
@@ -136,8 +138,8 @@ footer{
 
 		<ul>♥얌마 소개♥
 		<div class="dropdownContents">
-		<li><a href="r.html">☆가족이 된 계기와 현재</a></li>
-		<li><a href="w.html">☆이름이 얌마인 이유</a></li>
+		<li><a href="r.html">☆family</a></li>
+		<li><a href="w.html">☆name</a></li>
 		
 		</div>
 		</ul>
@@ -157,14 +159,27 @@ footer{
 
 
 	
-	<section>
-		<a href="babo.html"><img src="img/777.PNG" width="1000" height="300"></a>
-		<a href="color.html"><img src="img/778.PNG" width="1000" height="300"></a>
-		<a href="http://m.uglugl.com/?n_media=8753&n_query=%EA%B0%95%EC%95%84%EC%A7%80%EA%B0%84%EC%8B%9D&n_rank=1&n_ad_group=grp-a001-01-000000011216418&n_ad=nad-a001-01-000000064379956&n_keyword_id=nkw-a001-01-000002056727086&n_keyword=%EA%B0%95%EC%95%84%EC%A7%80%EA%B0%84%EC%8B%9D&n_campaign_type=1&NaPm=ct%3Djwtjpe20%7Cci%3D0yq0000fdK5rIusqjvnk%7Ctr%3Dsa%7Chk%3Df9f3c75302182f2c541a6bf4fc6f39dc895f1c35"><img src="img/779.PNG" width="1000" height="300"></a>
-		
-	</section>
+   <section class="tab_content">
+     
+    <input type="radio" name="tabmenu" id="tab01" checked>
+    <input type="radio" name="tabmenu" id="tab02">
+    <input type="radio" name="tabmenu" id="tab03">
+   
+    <a class="conbox con1" href="babo.html"> </a>
+    <a class="conbox con2" href="color.html"></a>
+    <a class="conbox con3" href="http://m.uglugl.com/?n_media=8753&n_query=%EA%B0%95%EC%95%84%EC%A7%80%EA%B0%84%EC%8B%9D&n_rank=1&n_ad_group=grp-a001-01-000000011216418&n_ad=nad-a001-01-000000064379956&n_keyword_id=nkw-a001-01-000002056727086&n_keyword=%EA%B0%95%EC%95%84%EC%A7%80%EA%B0%84%EC%8B%9D&n_campaign_type=1&NaPm=ct%3Djwtjpe20%7Cci%3D0yq0000fdK5rIusqjvnk%7Ctr%3Dsa%7Chk%3Df9f3c75302182f2c541a6bf4fc6f39dc895f1c35"></a>
+ 
+    <div class="btn">
+    <label for="tab01"></label>
+    <label for="tab02"></label>
+    <label for="tab03"></label>
+    </div>
+ 
+    </section>
+   
+       
 
-	<div class="clear"></div>
+	
 
 	<footer>
 		
